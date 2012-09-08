@@ -23,7 +23,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>cmc.software.mobile.edu4kids.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.thangcao.behoctienganh</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
