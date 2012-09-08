@@ -8,12 +8,12 @@
 
 #import "UIGridViewController.h"
 #import "DatabaseConnection.h"
-#import "GADBannerView.h"
+//#import "GADBannerView.h"
 
 @interface UIGridViewController ()
 
 - (void)showMopub:(int)y;
--c(void)hideMopub;
+- (void)hideMopub;
 
 @end
 
@@ -74,9 +74,9 @@
     [_gridView setDelegate:self];
     [self.view addSubview:_gridView];
     [_gridView setBackgroundColor:[UIColor blackColor]];
-    _banner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeLeaderboard];
-    [_banner setCenter:self.view.center];
-    [self.view addSubview:_banner];
+//    _banner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeLeaderboard];
+//    [_banner setCenter:self.view.center];
+//    [self.view addSubview:_banner];
 //    [_banner setDelegate:self];
     [headerBgImg release];
     [self showMopub:668];

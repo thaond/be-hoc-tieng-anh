@@ -223,15 +223,4 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
--(void)showMopub:(int)y{
-    [_adView removeFromSuperview];
-    CGRect frame = _adView.frame;
-    frame.origin.y = y;
-    _adView.frame = frame;
-    [self.window. insertSubview:_adView atIndex:[self.view.subviews count]];
-}
--(void)hideMopub{
-    //[_adView removeFromSuperview];
-}
-
 @end
