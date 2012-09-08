@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GADBannerView.h"
+//#import "GADBannerView.h"
 
 @interface GADBannerViewController : UIViewController
 {
