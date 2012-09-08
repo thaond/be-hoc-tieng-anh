@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIGridViewController.h"
 #import "UIGridView.h"
 
-@interface HomeViewController : UIGridViewController
+@interface HomeViewController : UIViewController <UIGridViewDataSource, UIGridViewDelegate>
 {
+    UIGridView * _gridView;
+    NSMutableArray * _gridData;
 }
 
 @end

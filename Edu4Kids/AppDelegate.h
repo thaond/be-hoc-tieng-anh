@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MPAdView.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate>
 {
+    MPAdView * _adView;
 }
 
 @property (strong, nonatomic) UIWindow *window;

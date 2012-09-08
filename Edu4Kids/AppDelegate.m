@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
+#import "UIGridViewController.h"
+#import "Lessons.h"
+#import "DatabaseConnection.h"
 
 @implementation AppDelegate
 
@@ -29,7 +32,38 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    HomeViewController * homeView = [[HomeViewController alloc] init];
+    NSString *paths = [[NSBundle mainBundle] resourcePath];
+    NSString *bundlePath2 = [paths stringByAppendingPathComponent:@"Lesson list.csv"];
+    NSString *dataFile2 = [NSString stringWithContentsOfFile:bundlePath2];
+    NSArray *dataRows2 = [dataFile2 componentsSeparatedByString:@"\r"];
+    NSMutableArray * lessonsArray = [[NSMutableArray alloc] init];
+    for (NSString * aRow in dataRows2) {
+//        Lessons * lesson = [[Lessons alloc] init];
+        NSMutableDictionary * lesson = [[NSMutableDictionary alloc] init];
+        NSArray * lessonFieldsArray = [aRow componentsSeparatedByString:@","];
+        [lesson setValue:[lessonFieldsArray objectAtIndex:0] forKey:@"lessonId"];
+        [lesson setValue:[lessonFieldsArray objectAtIndex:1] forKey:@"lessonName"];
+        [lesson setValue:[lessonFieldsArray objectAtIndex:2] forKey:@"lessonAudio"];
+        [lesson setValue:[lessonFieldsArray objectAtIndex:3] forKey:@"lessonVideo"];
+        [lesson setValue:[lessonFieldsArray objectAtIndex:4] forKey:@"lessonPhoto"];
+        [lesson setValue:[lessonFieldsArray objectAtIndex:5] forKey:@"lessonURL"];
+        [lesson setValue:[lessonFieldsArray objectAtIndex:6] forKey:@"lessonCategory"];
+        [lesson setValue:[lessonFieldsArray objectAtIndex:7] forKey:@"lessonType"];
+//        lesson.lessonAudio = [lessonFieldsArray objectAtIndex:2];
+//        lesson.lessonVideo = [lessonFieldsArray objectAtIndex:3];
+//        lesson.lessonPhoto = [lessonFieldsArray objectAtIndex:4];
+//        lesson.lessonURL = [lessonFieldsArray objectAtIndex:5];
+//        lesson.lessonCategory = [lessonFieldsArray objectAtIndex:6];
+//        lesson.lessonType = [lessonFieldsArray objectAtIndex:7];
+        
+        [lessonsArray addObject:lesson];
+        [lesson release];
+    }
+    
+    [DatabaseConnection writeListItems:lessonsArray toEntity:@"ManagedLessons" withPrimaryKey:@"lessonId"];
+
+    UIGridViewController * homeView = [[UIGridViewController alloc] init];
+    [homeView setParentId:@"0"];
     UINavigationController * homeNavCtrl = [[UINavigationController alloc] initWithRootViewController:homeView];
     
     self.window.rootViewController = homeNavCtrl;
@@ -187,6 +221,17 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+-(void)showMopub:(int)y{
+    [_adView removeFromSuperview];
+    CGRect frame = _adView.frame;
+    frame.origin.y = y;
+    _adView.frame = frame;
+    [self.window. insertSubview:_adView atIndex:[self.view.subviews count]];
+}
+-(void)hideMopub{
+    //[_adView removeFromSuperview];
 }
 
 @end
