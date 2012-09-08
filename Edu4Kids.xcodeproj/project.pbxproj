@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		475E0BF015F607E200854801 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475E0BEF15F607E200854801 /* CoreImage.framework */; };
 		475E0BF315F607F200854801 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 475E0BF215F607F200854801 /* libz.1.2.5.dylib */; };
-		475E0BF515F6094700854801 /* libcommonCrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 475E0BF415F6094700854801 /* libcommonCrypto.dylib */; };
 		477815B215F4E2D5009B8A1B /* ipad2-welcom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 477815AF15F4E2D5009B8A1B /* ipad2-welcom.jpg */; };
 		477815B315F4E2D5009B8A1B /* ipad3-welcom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 477815B015F4E2D5009B8A1B /* ipad3-welcom.jpg */; };
 		477815B415F4E2D5009B8A1B /* Lesson list.csv in Resources */ = {isa = PBXBuildFile; fileRef = 477815B115F4E2D5009B8A1B /* Lesson list.csv */; };
@@ -27,7 +26,6 @@
 		477815F015F4E44E009B8A1B /* EGOImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 477815E415F4E44E009B8A1B /* EGOImageButton.m */; };
 		477815F115F4E44E009B8A1B /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 477815E715F4E44E009B8A1B /* EGOImageLoadConnection.m */; };
 		477815F215F4E44E009B8A1B /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 477815E915F4E44E009B8A1B /* EGOImageLoader.m */; };
-		477815F315F4E44E009B8A1B /* CMCImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 477815EC15F4E44E009B8A1B /* CMCImageView.m */; };
 		477815F415F4E44E009B8A1B /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 477815EE15F4E44E009B8A1B /* EGOImageView.m */; };
 		477815FB15F4E569009B8A1B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 477815FA15F4E569009B8A1B /* Reachability.m */; };
 		4778160C15F4E5E4009B8A1B /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4778160115F4E5E4009B8A1B /* NSObject+SBJSON.m */; };
@@ -43,7 +41,6 @@
 		E23704E215EE60C000CF7A8D /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23704E115EE60C000CF7A8D /* HomeViewController.xib */; };
 		E23704EA15EE64C700CF7A8D /* GridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E23704E415EE64C700CF7A8D /* GridViewCell.m */; };
 		E23704EB15EE64C700CF7A8D /* UIGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = E23704E715EE64C700CF7A8D /* UIGridView.m */; };
-		E23704EC15EE64C700CF7A8D /* UIGridViewCell+DownloadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E23704E915EE64C700CF7A8D /* UIGridViewCell+DownloadImage.m */; };
 		E23704F015EE6B4700CF7A8D /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = E23704EF15EE6B4700CF7A8D /* Lessons.m */; };
 		E23704F315EE7D7100CF7A8D /* UIGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23704F215EE7D7100CF7A8D /* UIGridViewController.m */; };
 		E23704F615EE899A00CF7A8D /* Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = E23704F515EE899A00CF7A8D /* Answers.m */; };
@@ -65,7 +62,6 @@
 /* Begin PBXFileReference section */
 		475E0BEF15F607E200854801 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		475E0BF215F607F200854801 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
-		475E0BF415F6094700854801 /* libcommonCrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommonCrypto.dylib; path = usr/lib/system/libcommonCrypto.dylib; sourceTree = SDKROOT; };
 		477815AF15F4E2D5009B8A1B /* ipad2-welcom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ipad2-welcom.jpg"; path = "Resources/ipad2-welcom.jpg"; sourceTree = "<group>"; };
 		477815B015F4E2D5009B8A1B /* ipad3-welcom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ipad3-welcom.jpg"; path = "Resources/ipad3-welcom.jpg"; sourceTree = "<group>"; };
 		477815B115F4E2D5009B8A1B /* Lesson list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Lesson list.csv"; path = "Resources/Lesson list.csv"; sourceTree = "<group>"; };
@@ -93,8 +89,6 @@
 		477815CE15F4E3FD009B8A1B /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		477815DA15F4E42C009B8A1B /* DownloadHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadHelper.h; sourceTree = "<group>"; };
 		477815DB15F4E42C009B8A1B /* DownloadHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadHelper.m; sourceTree = "<group>"; };
-		477815DC15F4E42C009B8A1B /* UIImage+CMCUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CMCUtilities.h"; sourceTree = "<group>"; };
-		477815DD15F4E42C009B8A1B /* UIImage+CMCUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CMCUtilities.m"; sourceTree = "<group>"; };
 		477815E015F4E44E009B8A1B /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 		477815E115F4E44E009B8A1B /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		477815E315F4E44E009B8A1B /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
@@ -103,17 +97,11 @@
 		477815E715F4E44E009B8A1B /* EGOImageLoadConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoadConnection.m; sourceTree = "<group>"; };
 		477815E815F4E44E009B8A1B /* EGOImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageLoader.h; sourceTree = "<group>"; };
 		477815E915F4E44E009B8A1B /* EGOImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageLoader.m; sourceTree = "<group>"; };
-		477815EB15F4E44E009B8A1B /* CMCImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMCImageView.h; sourceTree = "<group>"; };
-		477815EC15F4E44E009B8A1B /* CMCImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMCImageView.m; sourceTree = "<group>"; };
 		477815ED15F4E44E009B8A1B /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
 		477815EE15F4E44E009B8A1B /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
-		477815F515F4E45A009B8A1B /* EGOCropImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EGOCropImageView.h; sourceTree = "<group>"; };
-		477815F615F4E45A009B8A1B /* EGOCropImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EGOCropImageView.m; sourceTree = "<group>"; };
 		477815F715F4E51D009B8A1B /* ProjectConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectConstant.h; sourceTree = "<group>"; };
 		477815F915F4E569009B8A1B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		477815FA15F4E569009B8A1B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		477815FC15F4E583009B8A1B /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
-		477815FD15F4E583009B8A1B /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		477815FF15F4E5E4009B8A1B /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		4778160015F4E5E4009B8A1B /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		4778160115F4E5E4009B8A1B /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
@@ -138,8 +126,6 @@
 		E23704E515EE64C700CF7A8D /* GridViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewCellDelegate.h; path = Views/GridViewCellDelegate.h; sourceTree = "<group>"; };
 		E23704E615EE64C700CF7A8D /* UIGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIGridView.h; path = Views/UIGridView.h; sourceTree = "<group>"; };
 		E23704E715EE64C700CF7A8D /* UIGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIGridView.m; path = Views/UIGridView.m; sourceTree = "<group>"; };
-		E23704E815EE64C700CF7A8D /* UIGridViewCell+DownloadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIGridViewCell+DownloadImage.h"; path = "Views/UIGridViewCell+DownloadImage.h"; sourceTree = "<group>"; };
-		E23704E915EE64C700CF7A8D /* UIGridViewCell+DownloadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIGridViewCell+DownloadImage.m"; path = "Views/UIGridViewCell+DownloadImage.m"; sourceTree = "<group>"; };
 		E23704EE15EE6B4700CF7A8D /* Lessons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lessons.h; path = MOdel/Lessons.h; sourceTree = "<group>"; };
 		E23704EF15EE6B4700CF7A8D /* Lessons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lessons.m; path = MOdel/Lessons.m; sourceTree = "<group>"; };
 		E23704F115EE7D7100CF7A8D /* UIGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIGridViewController.h; path = ViewControllers/UIGridViewController.h; sourceTree = "<group>"; };
@@ -174,7 +160,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				475E0BF515F6094700854801 /* libcommonCrypto.dylib in Frameworks */,
 				475E0BF315F607F200854801 /* libz.1.2.5.dylib in Frameworks */,
 				475E0BF015F607E200854801 /* CoreImage.framework in Frameworks */,
 				4778161715F4E686009B8A1B /* MobileCoreServices.framework in Frameworks */,
@@ -208,8 +193,6 @@
 				477815DE15F4E443009B8A1B /* EGOImage */,
 				477815DA15F4E42C009B8A1B /* DownloadHelper.h */,
 				477815DB15F4E42C009B8A1B /* DownloadHelper.m */,
-				477815DC15F4E42C009B8A1B /* UIImage+CMCUtilities.h */,
-				477815DD15F4E42C009B8A1B /* UIImage+CMCUtilities.m */,
 				477815BA15F4E3FD009B8A1B /* HTTP Helper */,
 			);
 			name = Libraries;
@@ -245,8 +228,6 @@
 		477815DE15F4E443009B8A1B /* EGOImage */ = {
 			isa = PBXGroup;
 			children = (
-				477815F515F4E45A009B8A1B /* EGOCropImageView.h */,
-				477815F615F4E45A009B8A1B /* EGOCropImageView.m */,
 				477815DF15F4E44E009B8A1B /* EGOCache */,
 				477815E215F4E44E009B8A1B /* EGOImageButton */,
 				477815E515F4E44E009B8A1B /* EGOImageLoader */,
@@ -287,8 +268,6 @@
 		477815EA15F4E44E009B8A1B /* EGOImageView */ = {
 			isa = PBXGroup;
 			children = (
-				477815EB15F4E44E009B8A1B /* CMCImageView.h */,
-				477815EC15F4E44E009B8A1B /* CMCImageView.m */,
 				477815ED15F4E44E009B8A1B /* EGOImageView.h */,
 				477815EE15F4E44E009B8A1B /* EGOImageView.m */,
 			);
@@ -332,8 +311,6 @@
 				E23704E515EE64C700CF7A8D /* GridViewCellDelegate.h */,
 				E23704E615EE64C700CF7A8D /* UIGridView.h */,
 				E23704E715EE64C700CF7A8D /* UIGridView.m */,
-				E23704E815EE64C700CF7A8D /* UIGridViewCell+DownloadImage.h */,
-				E23704E915EE64C700CF7A8D /* UIGridViewCell+DownloadImage.m */,
 				E23704E115EE60C000CF7A8D /* HomeViewController.xib */,
 			);
 			name = Views;
@@ -368,7 +345,6 @@
 		E2E2367115E928AA00110A13 = {
 			isa = PBXGroup;
 			children = (
-				475E0BF415F6094700854801 /* libcommonCrypto.dylib */,
 				477815B715F4E2FE009B8A1B /* Default-Landscape~ipad.png */,
 				E2E2368815E928AA00110A13 /* Edu4Kids */,
 				E2E2367F15E928AA00110A13 /* Frameworks */,
@@ -432,8 +408,6 @@
 		E2E2369F15E93B7500110A13 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				477815FC15F4E583009B8A1B /* Utilities.h */,
-				477815FD15F4E583009B8A1B /* Utilities.m */,
 				477815FE15F4E5E4009B8A1B /* JSON */,
 				477815B915F4E3D6009B8A1B /* Libraries */,
 				E2E236A015E93B7500110A13 /* DatabaseManager */,
@@ -528,7 +502,6 @@
 				E23704DF15EE609000CF7A8D /* HomeViewController.m in Sources */,
 				E23704EA15EE64C700CF7A8D /* GridViewCell.m in Sources */,
 				E23704EB15EE64C700CF7A8D /* UIGridView.m in Sources */,
-				E23704EC15EE64C700CF7A8D /* UIGridViewCell+DownloadImage.m in Sources */,
 				E23704F015EE6B4700CF7A8D /* Lessons.m in Sources */,
 				E23704F315EE7D7100CF7A8D /* UIGridViewController.m in Sources */,
 				E23704F615EE899A00CF7A8D /* Answers.m in Sources */,
@@ -546,7 +519,6 @@
 				477815F015F4E44E009B8A1B /* EGOImageButton.m in Sources */,
 				477815F115F4E44E009B8A1B /* EGOImageLoadConnection.m in Sources */,
 				477815F215F4E44E009B8A1B /* EGOImageLoader.m in Sources */,
-				477815F315F4E44E009B8A1B /* CMCImageView.m in Sources */,
 				477815F415F4E44E009B8A1B /* EGOImageView.m in Sources */,
 				477815FB15F4E569009B8A1B /* Reachability.m in Sources */,
 				4778160C15F4E5E4009B8A1B /* NSObject+SBJSON.m in Sources */,
