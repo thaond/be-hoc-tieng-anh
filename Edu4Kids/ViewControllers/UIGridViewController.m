@@ -8,7 +8,7 @@
 
 #import "UIGridViewController.h"
 #import "DatabaseConnection.h"
-//#import "GADBannerView.h"
+#import "MPConstants.h"
 
 @interface UIGridViewController ()
 
@@ -79,6 +79,7 @@
 //    [self.view addSubview:_banner];
 //    [_banner setDelegate:self];
     [headerBgImg release];
+    _adView = [[MPAdView alloc] initWithAdUnitId:DEFAULT_PUB_ID size:MOPUB_LEADERBOARD_SIZE];
     [self showMopub:668];
 }
 
