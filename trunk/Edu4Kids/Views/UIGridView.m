@@ -132,7 +132,7 @@
         numberOfRows = numberOfCells / numberOfColumns;
     }
     
-    cellWidth = 320 / numberOfColumns;
+    cellWidth = self.frame.size.width / numberOfColumns;
     cellHeight = cellWidth * 3.0 / 4;
     
     if ([dataSource respondsToSelector:@selector(gridView:heightForRowAtIndex:)]) {
@@ -174,7 +174,7 @@
         numberOfRows = numberOfCells / numberOfColumns;
     }
     
-    cellWidth = 320 / numberOfColumns;
+    cellWidth = self.frame.size.width / numberOfColumns;
     cellHeight = cellWidth * 3.0 / 4;
     
     if ([dataSource respondsToSelector:@selector(gridView:heightForRowAtIndex:)]) {
