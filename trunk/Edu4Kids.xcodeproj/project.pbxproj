@@ -118,7 +118,6 @@
 		4778161715F4E686009B8A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4778161615F4E686009B8A1B /* MobileCoreServices.framework */; };
 		478C0A3A15FCA24A001D841F /* YoutubeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478C0A3815FCA24A001D841F /* YoutubeVideoViewController.m */; };
 		478C0A3B15FCA24A001D841F /* YoutubeVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478C0A3915FCA24A001D841F /* YoutubeVideoViewController.xib */; };
-		478C0A3E15FCA929001D841F /* GADBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478C0A3D15FCA929001D841F /* GADBannerViewController.m */; };
 		478C0B6A15FCAAAD001D841F /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 478C0B3515FCAAAD001D841F /* libGoogleAdMobAds.a */; };
 		478C0B7015FCAC9A001D841F /* Edu4KidsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 478C0B6F15FCAC9A001D841F /* Edu4KidsIcon.png */; };
 		478C0B7215FCACA9001D841F /* Edu4KidsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 478C0B7115FCACA9001D841F /* Edu4KidsIcon.png */; };
@@ -325,8 +324,6 @@
 		478C0A3715FCA249001D841F /* YoutubeVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YoutubeVideoViewController.h; path = ViewControllers/YoutubeVideoViewController.h; sourceTree = "<group>"; };
 		478C0A3815FCA24A001D841F /* YoutubeVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YoutubeVideoViewController.m; path = ViewControllers/YoutubeVideoViewController.m; sourceTree = "<group>"; };
 		478C0A3915FCA24A001D841F /* YoutubeVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YoutubeVideoViewController.xib; path = ViewControllers/YoutubeVideoViewController.xib; sourceTree = "<group>"; };
-		478C0A3C15FCA928001D841F /* GADBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerViewController.h; path = ViewControllers/GADBannerViewController.h; sourceTree = "<group>"; };
-		478C0A3D15FCA929001D841F /* GADBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADBannerViewController.m; path = ViewControllers/GADBannerViewController.m; sourceTree = "<group>"; };
 		478C0B2C15FCAAAD001D841F /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
 		478C0B2D15FCAAAD001D841F /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
 		478C0B2E15FCAAAD001D841F /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
@@ -763,8 +760,6 @@
 		E23704DB15EE5FD500CF7A8D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				478C0A3C15FCA928001D841F /* GADBannerViewController.h */,
-				478C0A3D15FCA929001D841F /* GADBannerViewController.m */,
 				E23704F115EE7D7100CF7A8D /* UIGridViewController.h */,
 				E23704F215EE7D7100CF7A8D /* UIGridViewController.m */,
 				478C0A3715FCA249001D841F /* YoutubeVideoViewController.h */,
@@ -1058,7 +1053,6 @@
 				471A32A615FB6AA60033BD75 /* CJSONSerializer.m in Sources */,
 				47331C7415FBA58000925D57 /* ShellViewCell.m in Sources */,
 				478C0A3A15FCA24A001D841F /* YoutubeVideoViewController.m in Sources */,
-				478C0A3E15FCA929001D841F /* GADBannerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1105,6 +1099,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_LDFLAGS = "-all_load";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -1127,6 +1122,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-all_load";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
