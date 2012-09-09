@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "HomeViewController.h"
 #import "UIGridViewController.h"
 #import "Lessons.h"
 #import "DatabaseConnection.h"
