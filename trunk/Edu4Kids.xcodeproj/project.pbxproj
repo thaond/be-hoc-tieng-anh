@@ -24,7 +24,7 @@
 		471A2EE415FAFF0C0033BD75 /* Fruits.png in Resources */ = {isa = PBXBuildFile; fileRef = 471A2ED215FAFF0C0033BD75 /* Fruits.png */; };
 		471A2EE515FAFF0C0033BD75 /* Numbers.png in Resources */ = {isa = PBXBuildFile; fileRef = 471A2ED315FAFF0C0033BD75 /* Numbers.png */; };
 		471A2EE615FAFF0C0033BD75 /* Shapes.png in Resources */ = {isa = PBXBuildFile; fileRef = 471A2ED415FAFF0C0033BD75 /* Shapes.png */; };
-		471A2EE715FAFF0C0033BD75 /* Wakupsong.png in Resources */ = {isa = PBXBuildFile; fileRef = 471A2ED515FAFF0C0033BD75 /* Wakupsong.png */; };
+		471A2EE715FAFF0C0033BD75 /* Wakeupsong.png in Resources */ = {isa = PBXBuildFile; fileRef = 471A2ED515FAFF0C0033BD75 /* Wakeupsong.png */; };
 		471A2EFA15FB34500033BD75 /* bongmo_sach.png in Resources */ = {isa = PBXBuildFile; fileRef = 471A2EED15FB34500033BD75 /* bongmo_sach.png */; };
 		471A2EFB15FB34500033BD75 /* ipad2-home-banner_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 471A2EEE15FB34500033BD75 /* ipad2-home-banner_01.png */; };
 		471A2EFC15FB34500033BD75 /* ipad2-home_giasach_hang1_ngoai.png in Resources */ = {isa = PBXBuildFile; fileRef = 471A2EEF15FB34500033BD75 /* ipad2-home_giasach_hang1_ngoai.png */; };
@@ -84,6 +84,8 @@
 		471A32A715FB6AA60033BD75 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 471A329B15FB6AA60033BD75 /* LICENSE.txt */; };
 		471A32A815FB6AA60033BD75 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 471A329C15FB6AA60033BD75 /* README.markdown */; };
 		471A32AA15FB6C180033BD75 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471A32A915FB6C180033BD75 /* StoreKit.framework */; };
+		47331C7415FBA58000925D57 /* ShellViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47331C7315FBA58000925D57 /* ShellViewCell.m */; };
+		47331C7715FC3C6800925D57 /* ShellViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47331C7615FC3C6800925D57 /* ShellViewCell.xib */; };
 		475E0BF015F607E200854801 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475E0BEF15F607E200854801 /* CoreImage.framework */; };
 		475E0BF315F607F200854801 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 475E0BF215F607F200854801 /* libz.1.2.5.dylib */; };
 		477815B215F4E2D5009B8A1B /* ipad2-welcom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 477815AF15F4E2D5009B8A1B /* ipad2-welcom.jpg */; };
@@ -114,7 +116,12 @@
 		4778161315F4E667009B8A1B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4778161215F4E667009B8A1B /* CFNetwork.framework */; };
 		4778161515F4E67E009B8A1B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4778161415F4E67E009B8A1B /* SystemConfiguration.framework */; };
 		4778161715F4E686009B8A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4778161615F4E686009B8A1B /* MobileCoreServices.framework */; };
-		E23704DF15EE609000CF7A8D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E23704DD15EE609000CF7A8D /* HomeViewController.m */; };
+		478C0A3A15FCA24A001D841F /* YoutubeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478C0A3815FCA24A001D841F /* YoutubeVideoViewController.m */; };
+		478C0A3B15FCA24A001D841F /* YoutubeVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478C0A3915FCA24A001D841F /* YoutubeVideoViewController.xib */; };
+		478C0A3E15FCA929001D841F /* GADBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 478C0A3D15FCA929001D841F /* GADBannerViewController.m */; };
+		478C0B6A15FCAAAD001D841F /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 478C0B3515FCAAAD001D841F /* libGoogleAdMobAds.a */; };
+		478C0B7015FCAC9A001D841F /* Edu4KidsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 478C0B6F15FCAC9A001D841F /* Edu4KidsIcon.png */; };
+		478C0B7215FCACA9001D841F /* Edu4KidsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 478C0B7115FCACA9001D841F /* Edu4KidsIcon.png */; };
 		E23704EA15EE64C700CF7A8D /* GridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E23704E415EE64C700CF7A8D /* GridViewCell.m */; };
 		E23704EB15EE64C700CF7A8D /* UIGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = E23704E715EE64C700CF7A8D /* UIGridView.m */; };
 		E23704F015EE6B4700CF7A8D /* Lessons.m in Sources */ = {isa = PBXBuildFile; fileRef = E23704EF15EE6B4700CF7A8D /* Lessons.m */; };
@@ -153,7 +160,7 @@
 		471A2ED215FAFF0C0033BD75 /* Fruits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fruits.png; sourceTree = "<group>"; };
 		471A2ED315FAFF0C0033BD75 /* Numbers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Numbers.png; sourceTree = "<group>"; };
 		471A2ED415FAFF0C0033BD75 /* Shapes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shapes.png; sourceTree = "<group>"; };
-		471A2ED515FAFF0C0033BD75 /* Wakupsong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wakupsong.png; sourceTree = "<group>"; };
+		471A2ED515FAFF0C0033BD75 /* Wakeupsong.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wakeupsong.png; sourceTree = "<group>"; };
 		471A2EED15FB34500033BD75 /* bongmo_sach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bongmo_sach.png; sourceTree = "<group>"; };
 		471A2EEE15FB34500033BD75 /* ipad2-home-banner_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad2-home-banner_01.png"; sourceTree = "<group>"; };
 		471A2EEF15FB34500033BD75 /* ipad2-home_giasach_hang1_ngoai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ipad2-home_giasach_hang1_ngoai.png"; sourceTree = "<group>"; };
@@ -254,6 +261,9 @@
 		471A329B15FB6AA60033BD75 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		471A329C15FB6AA60033BD75 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		471A32A915FB6C180033BD75 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		47331C7215FBA58000925D57 /* ShellViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShellViewCell.h; path = Views/ShellViewCell.h; sourceTree = "<group>"; };
+		47331C7315FBA58000925D57 /* ShellViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShellViewCell.m; path = Views/ShellViewCell.m; sourceTree = "<group>"; };
+		47331C7615FC3C6800925D57 /* ShellViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ShellViewCell.xib; path = Views/ShellViewCell.xib; sourceTree = "<group>"; };
 		475E0BEF15F607E200854801 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		475E0BF215F607F200854801 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		477815AF15F4E2D5009B8A1B /* ipad2-welcom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "ipad2-welcom.jpg"; path = "Resources/ipad2-welcom.jpg"; sourceTree = "<group>"; };
@@ -312,8 +322,23 @@
 		4778161215F4E667009B8A1B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4778161415F4E67E009B8A1B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4778161615F4E686009B8A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		E23704DC15EE609000CF7A8D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ViewControllers/HomeViewController.h; sourceTree = "<group>"; };
-		E23704DD15EE609000CF7A8D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ViewControllers/HomeViewController.m; sourceTree = "<group>"; };
+		478C0A3715FCA249001D841F /* YoutubeVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YoutubeVideoViewController.h; path = ViewControllers/YoutubeVideoViewController.h; sourceTree = "<group>"; };
+		478C0A3815FCA24A001D841F /* YoutubeVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YoutubeVideoViewController.m; path = ViewControllers/YoutubeVideoViewController.m; sourceTree = "<group>"; };
+		478C0A3915FCA24A001D841F /* YoutubeVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = YoutubeVideoViewController.xib; path = ViewControllers/YoutubeVideoViewController.xib; sourceTree = "<group>"; };
+		478C0A3C15FCA928001D841F /* GADBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GADBannerViewController.h; path = ViewControllers/GADBannerViewController.h; sourceTree = "<group>"; };
+		478C0A3D15FCA929001D841F /* GADBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GADBannerViewController.m; path = ViewControllers/GADBannerViewController.m; sourceTree = "<group>"; };
+		478C0B2C15FCAAAD001D841F /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		478C0B2D15FCAAAD001D841F /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		478C0B2E15FCAAAD001D841F /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		478C0B2F15FCAAAD001D841F /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		478C0B3015FCAAAD001D841F /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		478C0B3115FCAAAD001D841F /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		478C0B3215FCAAAD001D841F /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		478C0B3315FCAAAD001D841F /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		478C0B3415FCAAAD001D841F /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		478C0B3515FCAAAD001D841F /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		478C0B6F15FCAC9A001D841F /* Edu4KidsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Edu4KidsIcon.png; sourceTree = "<group>"; };
+		478C0B7115FCACA9001D841F /* Edu4KidsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Edu4KidsIcon.png; sourceTree = "<group>"; };
 		E23704E315EE64C700CF7A8D /* GridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewCell.h; path = Views/GridViewCell.h; sourceTree = "<group>"; };
 		E23704E415EE64C700CF7A8D /* GridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridViewCell.m; path = Views/GridViewCell.m; sourceTree = "<group>"; };
 		E23704E515EE64C700CF7A8D /* GridViewCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewCellDelegate.h; path = Views/GridViewCellDelegate.h; sourceTree = "<group>"; };
@@ -366,6 +391,7 @@
 				E2E2368315E928AA00110A13 /* Foundation.framework in Frameworks */,
 				E2E2368515E928AA00110A13 /* CoreGraphics.framework in Frameworks */,
 				E2E2368715E928AA00110A13 /* CoreData.framework in Frameworks */,
+				478C0B6A15FCAAAD001D841F /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +401,7 @@
 		471A2EC315FAFF0C0033BD75 /* PNGs */ = {
 			isa = PBXGroup;
 			children = (
+				478C0B6F15FCAC9A001D841F /* Edu4KidsIcon.png */,
 				471A2EC415FAFF0C0033BD75 /* ABC.png */,
 				471A2EC515FAFF0C0033BD75 /* ABCsong.png */,
 				471A2EC615FAFF0C0033BD75 /* Animals.png */,
@@ -392,7 +419,7 @@
 				471A2ED215FAFF0C0033BD75 /* Fruits.png */,
 				471A2ED315FAFF0C0033BD75 /* Numbers.png */,
 				471A2ED415FAFF0C0033BD75 /* Shapes.png */,
-				471A2ED515FAFF0C0033BD75 /* Wakupsong.png */,
+				471A2ED515FAFF0C0033BD75 /* Wakeupsong.png */,
 			);
 			path = PNGs;
 			sourceTree = "<group>";
@@ -699,15 +726,36 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		478C0AD315FCAAAD001D841F /* GoogleAdMobAdsSdkiOS-6-1.1.4 */ = {
+			isa = PBXGroup;
+			children = (
+				478C0B2C15FCAAAD001D841F /* GADAdMobExtras.h */,
+				478C0B2D15FCAAAD001D841F /* GADAdNetworkExtras.h */,
+				478C0B2E15FCAAAD001D841F /* GADAdSize.h */,
+				478C0B2F15FCAAAD001D841F /* GADBannerView.h */,
+				478C0B3015FCAAAD001D841F /* GADBannerViewDelegate.h */,
+				478C0B3115FCAAAD001D841F /* GADInterstitial.h */,
+				478C0B3215FCAAAD001D841F /* GADInterstitialDelegate.h */,
+				478C0B3315FCAAAD001D841F /* GADRequest.h */,
+				478C0B3415FCAAAD001D841F /* GADRequestError.h */,
+				478C0B3515FCAAAD001D841F /* libGoogleAdMobAds.a */,
+			);
+			path = "GoogleAdMobAdsSdkiOS-6-1.1.4";
+			sourceTree = "<group>";
+		};
 		E23704D915EE5EE200CF7A8D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				478C0A3915FCA24A001D841F /* YoutubeVideoViewController.xib */,
 				471A2FB815FB5E030033BD75 /* GADBannerViewController.xib */,
 				E23704E315EE64C700CF7A8D /* GridViewCell.h */,
 				E23704E415EE64C700CF7A8D /* GridViewCell.m */,
 				E23704E515EE64C700CF7A8D /* GridViewCellDelegate.h */,
 				E23704E615EE64C700CF7A8D /* UIGridView.h */,
 				E23704E715EE64C700CF7A8D /* UIGridView.m */,
+				47331C7215FBA58000925D57 /* ShellViewCell.h */,
+				47331C7315FBA58000925D57 /* ShellViewCell.m */,
+				47331C7615FC3C6800925D57 /* ShellViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -715,10 +763,12 @@
 		E23704DB15EE5FD500CF7A8D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				478C0A3C15FCA928001D841F /* GADBannerViewController.h */,
+				478C0A3D15FCA929001D841F /* GADBannerViewController.m */,
 				E23704F115EE7D7100CF7A8D /* UIGridViewController.h */,
 				E23704F215EE7D7100CF7A8D /* UIGridViewController.m */,
-				E23704DC15EE609000CF7A8D /* HomeViewController.h */,
-				E23704DD15EE609000CF7A8D /* HomeViewController.m */,
+				478C0A3715FCA249001D841F /* YoutubeVideoViewController.h */,
+				478C0A3815FCA24A001D841F /* YoutubeVideoViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -741,6 +791,8 @@
 		E2E2367115E928AA00110A13 = {
 			isa = PBXGroup;
 			children = (
+				478C0B7115FCACA9001D841F /* Edu4KidsIcon.png */,
+				478C0AD315FCAAAD001D841F /* GoogleAdMobAdsSdkiOS-6-1.1.4 */,
 				471A32A915FB6C180033BD75 /* StoreKit.framework */,
 				471A2FAD15FB5ACB0033BD75 /* AudioToolbox.framework */,
 				471A2FAB15FB5A760033BD75 /* AVFoundation.framework */,
@@ -902,7 +954,7 @@
 				471A2EE415FAFF0C0033BD75 /* Fruits.png in Resources */,
 				471A2EE515FAFF0C0033BD75 /* Numbers.png in Resources */,
 				471A2EE615FAFF0C0033BD75 /* Shapes.png in Resources */,
-				471A2EE715FAFF0C0033BD75 /* Wakupsong.png in Resources */,
+				471A2EE715FAFF0C0033BD75 /* Wakeupsong.png in Resources */,
 				471A2EFA15FB34500033BD75 /* bongmo_sach.png in Resources */,
 				471A2EFB15FB34500033BD75 /* ipad2-home-banner_01.png in Resources */,
 				471A2EFC15FB34500033BD75 /* ipad2-home_giasach_hang1_ngoai.png in Resources */,
@@ -924,6 +976,10 @@
 				471A327B15FB63530033BD75 /* MRAID.bundle in Resources */,
 				471A32A715FB6AA60033BD75 /* LICENSE.txt in Resources */,
 				471A32A815FB6AA60033BD75 /* README.markdown in Resources */,
+				47331C7715FC3C6800925D57 /* ShellViewCell.xib in Resources */,
+				478C0A3B15FCA24A001D841F /* YoutubeVideoViewController.xib in Resources */,
+				478C0B7015FCAC9A001D841F /* Edu4KidsIcon.png in Resources */,
+				478C0B7215FCACA9001D841F /* Edu4KidsIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,7 +995,6 @@
 				E2E2369615E928AA00110A13 /* Edu4Kids.xcdatamodeld in Sources */,
 				E2E236A915E93C3F00110A13 /* WISeFansWebServices.m in Sources */,
 				E2E236AC15E93CAF00110A13 /* DatabaseConnection.m in Sources */,
-				E23704DF15EE609000CF7A8D /* HomeViewController.m in Sources */,
 				E23704EA15EE64C700CF7A8D /* GridViewCell.m in Sources */,
 				E23704EB15EE64C700CF7A8D /* UIGridView.m in Sources */,
 				E23704F015EE6B4700CF7A8D /* Lessons.m in Sources */,
@@ -1001,6 +1056,9 @@
 				471A32A415FB6AA60033BD75 /* CJSONDeserializer.m in Sources */,
 				471A32A515FB6AA60033BD75 /* CJSONScanner.m in Sources */,
 				471A32A615FB6AA60033BD75 /* CJSONSerializer.m in Sources */,
+				47331C7415FBA58000925D57 /* ShellViewCell.m in Sources */,
+				478C0A3A15FCA24A001D841F /* YoutubeVideoViewController.m in Sources */,
+				478C0A3E15FCA929001D841F /* GADBannerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1089,7 +1147,10 @@
 					"\"$(SDKROOT)/usr/lib/system\"",
 					"\"$(SRCROOT)/Edu4Kids/GoogleAdMobAdsSdkiOS-6.1.4/Add-ons/GoogleAnalyticsiOS_2.0beta2/Library\"",
 					"\"$(SRCROOT)/Edu4Kids/GoogleAdMobAdsSdkiOS-6.1.4\"",
+					"\"$(SRCROOT)/GoogleAdMobAdsSdkiOS-6-1.1.4/Add-ons/GoogleAnalyticsiOS_2.0beta2/Library\"",
+					"\"$(SRCROOT)/GoogleAdMobAdsSdkiOS-6-1.1.4\"",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1107,7 +1168,10 @@
 					"\"$(SDKROOT)/usr/lib/system\"",
 					"\"$(SRCROOT)/Edu4Kids/GoogleAdMobAdsSdkiOS-6.1.4/Add-ons/GoogleAnalyticsiOS_2.0beta2/Library\"",
 					"\"$(SRCROOT)/Edu4Kids/GoogleAdMobAdsSdkiOS-6.1.4\"",
+					"\"$(SRCROOT)/GoogleAdMobAdsSdkiOS-6-1.1.4/Add-ons/GoogleAnalyticsiOS_2.0beta2/Library\"",
+					"\"$(SRCROOT)/GoogleAdMobAdsSdkiOS-6-1.1.4\"",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
