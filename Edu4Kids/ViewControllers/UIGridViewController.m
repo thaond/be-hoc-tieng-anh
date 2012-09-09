@@ -109,6 +109,8 @@
     
     // TODO: add Banner for Advertising
     _adView = [[MPAdView alloc] initWithAdUnitId:DEFAULT_PUB_ID size:MOPUB_LEADERBOARD_SIZE];
+    _adView.delegate = self;
+    [_adView loadAd];
     [self showMopub:668];
     
     [headerBgImg release];
