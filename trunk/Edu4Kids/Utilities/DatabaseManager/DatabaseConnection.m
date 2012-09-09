@@ -18,9 +18,9 @@
 + (NSMutableDictionary*)readFromManagedItem:(NSManagedObject*)managedItem withKeys:(NSArray*)keyArray
 {
     NSMutableDictionary * item = [[NSMutableDictionary alloc] init];
-    NSEntityDescription * entityDesc = [[NSEntityDescription alloc] init];
-    entityDesc = managedItem.entity;
-    item = (NSMutableDictionary*)[entityDesc attributesByName];
+    for (int i = 0; i < keyArray.count; i++) {
+        [item setValue:[managedItem valueForKey:[keyArray objectAtIndex:i]] forKey:[keyArray objectAtIndex:i]];
+    }
     
     return [item autorelease];
 }
@@ -157,6 +157,7 @@
         if (value) {
             if (![value isEqual:[NSNull null]]) {
                 [managedItem setValue:[NSString stringWithFormat:@"%@", value] forKey:[keyArray objectAtIndex:i]];
+                NSLog(@"Item: %@ = %@", [NSString stringWithFormat:@"%@", value], [keyArray objectAtIndex:i]);
             }
         }
     }
@@ -256,9 +257,9 @@
     for (int i=0;i<[list count];i++) 
     {
         item = [list objectAtIndex:i];
-        
-        fetchRequest.predicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"%@ = '%@'", 
-                                  primaryKey, [item valueForKey:primaryKey]]];
+        NSString * predicateString = [NSString stringWithFormat:@"%@ = '%@'",
+                                      primaryKey, [item valueForKey:primaryKey]];
+        fetchRequest.predicate = [NSPredicate predicateWithFormat:predicateString];
         
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:[keyArray objectAtIndex:0] ascending:NO];
         NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
