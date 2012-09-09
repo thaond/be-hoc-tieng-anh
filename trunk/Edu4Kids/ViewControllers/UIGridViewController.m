@@ -9,6 +9,16 @@
 #import "UIGridViewController.h"
 #import "DatabaseConnection.h"
 #import "MPConstants.h"
+#import "ShellViewCell.h"
+#import "YoutubeVideoViewController.h"
+
+#define LessonCategory  @"category"
+#define LessonLink      @"link"
+#define LessonVideo     @"video"
+#define LessonAudio     @"audio"
+#define LessonPhoto     @"photo"
+
+#define kSampleAdUnitID @"a1504c824b46835"
 
 @interface UIGridViewController ()
 
@@ -19,7 +29,6 @@
 
 @implementation UIGridViewController
 
-@synthesize gridView = _gridView;
 @synthesize gridData = _gridData;
 @synthesize parentId = _parentId;
 
@@ -28,16 +37,23 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-//        _gridView = [[UIGridView alloc] initWithFrame:CGRectMake(0, 44, self.view.bounds.size.width, self.view.bounds.size.height-44-49)];
-//        _gridView = [[UIGridView alloc] initWithFrame:self.view.bounds];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 100, 1024, 648) style:UITableViewStylePlain];
+        _tableData = [[NSMutableArray alloc] init];
+        
+        _banner = [[GADBannerView alloc]
+                   initWithFrame:CGRectMake(1024 - GAD_SIZE_728x90.width,
+                                            768 - 20 - 90,
+                                            GAD_SIZE_728x90.width,
+                                            GAD_SIZE_728x90.height)];
+        isLoaded_ = NO;
     }
     return self;
 }
 
 - (void)dealloc
 {
-    [_gridData release];
-    [_gridView release];
+    [_tableData release];
+    [_tableView release];
     [super dealloc];
 }
 
@@ -62,39 +78,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES];
-    [self.navigationController.navigationBar setHidden:YES];
-    [self setTitle:@"Be hoc tieng Anh"];
+    
+    // TODO: configure Data of View
+    _tableData = [[DatabaseConnection readItemsFromEntity:@"ManagedLessons" withConditionString:[NSString stringWithFormat:@"lessonCategory = '%@'", _parentId] sortWithKey:@"lessonName" ascending:YES] retain];
+    
+    for (NSMutableDictionary * dict in _tableData) {
+        NSLog(@"%@ %@,", [dict valueForKey:@"lessonId"], [dict valueForKey:@"lessonPhoto"]);
+    }
+
+    // TODO: configure Header View with Title
     _headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1024, 100)];
     UIImageView * headerBgImg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ipad2-home-banner_01"]];
     [_headerView addSubview:headerBgImg];
+    // TODO: add back button to view
+    UIButton * backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [backButton setFrame:CGRectMake(500, 0, 73, 100)];
+    [backButton setBackgroundImage:[UIImage imageNamed:@"menu_1.png"] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(buttonWasClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [_headerView addSubview:backButton];
+    
     [self.view addSubview:_headerView];
-    _gridView = [[UIGridView alloc] initWithFrame:CGRectMake(0, 100, 1024, 668)];
-    [_gridView setDataSource:self];
-    [_gridView setDelegate:self];
-    [self.view addSubview:_gridView];
-    [_gridView setBackgroundColor:[UIColor blackColor]];
-//    _banner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeLeaderboard];
-//    [_banner setCenter:self.view.center];
-//    [self.view addSubview:_banner];
-//    [_banner setDelegate:self];
-    [headerBgImg release];
+    
+    
+    //TODO: configure table view
+    [_tableView setBackgroundColor:[UIColor clearColor]];
+    [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [_tableView setDataSource:self];
+    [_tableView setDelegate:self];
+    [self.view addSubview:_tableView];
+    
+    // TODO: add Banner for Advertising
     _adView = [[MPAdView alloc] initWithAdUnitId:DEFAULT_PUB_ID size:MOPUB_LEADERBOARD_SIZE];
     [self showMopub:668];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    if (_gridData == nil)
-    {
-        _gridData = [[NSMutableArray alloc] init];
-    }
     
-    [_gridData removeAllObjects];
-    _gridData = [[DatabaseConnection readItemsFromEntity:@"ManagedLessons" withConditionString:[NSString stringWithFormat:@"lessonCategory = '%@'", _parentId] sortWithKey:@"lessonName" ascending:YES] retain];
-    
-    [_gridView reloadData];
+    [headerBgImg release];
+//    [backButton release];
 }
 
 - (void)viewDidUnload
@@ -104,68 +122,103 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+    [self resetAdView:self];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationLandscapeLeft || interfaceOrientation == UIInterfaceOrientationLandscapeRight);
 }
 
-#pragma mark - Grid View Data Source
+#pragma mark - Table View Data Source
 
-- (NSInteger)gridView:(UIGridView*)gridView numberOfCellsPerRowInRow:(NSInteger)rowIndex
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 5;
+    return 216;
 }
 
-- (NSInteger)numberOfCellsInGridView:(UIGridView *)gridView
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;//_gridData.count;
+    return ((_tableData.count / 5) > 3 ? _tableData.count/5 : 3);
 }
 
-- (GridViewCell*)gridView:(UIGridView *)gridView cellAtIndex:(NSInteger)cellIndex
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GridViewCell * cell = [_gridView dequeueRecycledView];
-    if (cell == nil) {
-         cell = [[[GridViewCell alloc] initWithFrame:CGRectZero] autorelease];
+    static NSString * cellID = @"ShellItemID";
+    ShellViewCell * cell = (ShellViewCell*)[_tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil)
+    {
+        cell = [[[ShellViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID] autorelease];
+        NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"ShellViewCell" owner:nil options:nil];
+        cell = (ShellViewCell*)[nib objectAtIndex:0];
     }
     
-    if (cellIndex % 5 == 0) {
-        [cell setBackgroundColor:[UIColor blueColor]];
+    for (int i = 0; i < 5; i++) {
+        if (indexPath.row * 5 + i < _tableData.count)
+        {
+            NSMutableDictionary * lessonDict = [[NSMutableDictionary alloc] init];
+            lessonDict = [[_tableData objectAtIndex:(indexPath.row * 5 + i)] retain];
+            NSString * lessonPhoto = [lessonDict valueForKey:@"lessonPhoto"];
+            NSLog(@"Lesson Photo: %@", lessonPhoto);
+            if (![[lessonDict valueForKey:@"lessonPhoto"] isEqualToString:@""])
+            {
+                if (i == 0)
+                {
+                    [cell.img0 setImage:[UIImage imageNamed:[lessonDict valueForKey:@"lessonPhoto"]]];
+                }
+                else if (i == 1)
+                {
+                    [cell.img1 setImage:[UIImage imageNamed:[lessonDict valueForKey:@"lessonPhoto"]]];
+                }
+                else if (i == 2)
+                {
+                    [cell.img2 setImage:[UIImage imageNamed:[lessonDict valueForKey:@"lessonPhoto"]]];
+                }
+                else if (i == 3)
+                {
+                    [cell.img3 setImage:[UIImage imageNamed:[lessonDict valueForKey:@"lessonPhoto"]]];
+                }
+                else if (i == 4)
+                {
+                    [cell.img4 setImage:[UIImage imageNamed:[lessonDict valueForKey:@"lessonPhoto"]]];
+                }
+                [cell setDelegate:self];
+            }
+            else
+            {
+                if (i == 0)
+                {
+                    [cell.img0 setImage:[UIImage imageNamed:@"Cover1-0.png"]];
+                }
+                else if (i == 1)
+                {
+                    [cell.img1 setImage:[UIImage imageNamed:@"Cover1-0.png"]];
+                }
+                else if (i == 2)
+                {
+                    [cell.img2 setImage:[UIImage imageNamed:@"Cover1-0.png"]];
+                }
+                else if (i == 3)
+                {
+                    [cell.img3 setImage:[UIImage imageNamed:@"Cover1-0.png"]];
+                }
+                else if (i == 4)
+                {
+                    [cell.img4 setImage:[UIImage imageNamed:@"Cover1-0.png"]];
+                }
+                [cell setDelegate:self];
+            }
+            [lessonDict release];
+        }
     }
-    else if (cellIndex % 5 == 1)
-    {
-        [cell setBackgroundColor:[UIColor redColor]];
-    }
-    else if (cellIndex % 5 == 2)
-    {
-        [cell setBackgroundColor:[UIColor grayColor]];
-    }
-    else if (cellIndex % 5 == 3)
-    {
-        [cell setBackgroundColor:[UIColor redColor]];
-    }
-    else if (cellIndex % 5 == 4)
-    {
-        [cell setBackgroundColor:[UIColor grayColor]];
-    }
-
-    [cell.textLabel setText:[NSString stringWithFormat:@"ABC - %d", cellIndex]];
-    [cell.textLabel setBackgroundColor:[UIColor clearColor]];
-    [cell.imageView setImage:[UIImage imageNamed:@"background.png"]];
+    
     
     return cell;
-}
-
-#pragma mark - Grid View Delegate
-
-- (void)gridView:(UIGridView *)gridView didSelectedCellAtIndex:(NSInteger)cellIndex
-{
-    
-}
-
-- (void)gridView:(UIGridView *)gridView didSelectRowAtIndex:(NSInteger)rowIndex andColumnAtIndex:(NSInteger)columnIndex
-{
-    
 }
 
 #pragma mark - Scroll View Delegate
@@ -192,6 +245,63 @@
 - (UIViewController *)viewControllerForPresentingModalView
 {
     return self;
+}
+
+#pragma mark - Shell View Cell Delegate
+
+- (void)shellDidSelectItemAtRow:(id)cell andColumnIndex:(NSInteger)columnIndex
+{
+    ShellViewCell * shellRow = cell;
+    NSIndexPath * indexPath = [_tableView indexPathForCell:shellRow];
+    
+    NSInteger cellIndex = indexPath.row * 5 + columnIndex;
+    
+    NSLog(@"Row %d and column %d, cell index %d of %d ", indexPath.row, columnIndex, cellIndex, _tableData.count);
+
+    NSMutableDictionary * lessonDict = [[[NSMutableDictionary alloc] init] autorelease];
+    lessonDict = [_tableData objectAtIndex:cellIndex];
+    
+    NSLog(@"Type: %@", [lessonDict valueForKey:@"lessonType"]);
+    
+    if ([[lessonDict valueForKey:@"lessonType"] isEqualToString:LessonCategory])
+    {
+        UIGridViewController * categoryDetailView = [[[UIGridViewController alloc] init] autorelease];
+        [categoryDetailView setParentId:[lessonDict valueForKey:@"lessonId"]];
+        [self.navigationController pushViewController:categoryDetailView animated:YES];
+    }
+    else if ([[lessonDict valueForKey:@"lessonType"] isEqualToString:LessonLink])
+    {
+        YoutubeVideoViewController * videoView = [[[YoutubeVideoViewController alloc] init] autorelease];
+        [videoView setLinkURL:[lessonDict valueForKey:@"lessonURL"]];
+        [self.navigationController pushViewController:videoView animated:YES];
+    }
+}
+
+- (void)buttonWasClicked:(id)sender
+{
+//    GADBannerViewController * GADView = [[GADBannerViewController alloc] init];
+//    [self.navigationController pushViewController:GADView animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)resetAdView:(UIViewController *)rootViewController {
+    // Always keep track of currentDelegate for notification forwarding
+    currentDelegate_ = rootViewController;
+    
+    // Ad already requested, simply add it into the view
+    if (isLoaded_) {
+        [rootViewController.view addSubview:_banner];
+    } else {
+        
+        _banner.delegate = self;
+        _banner.rootViewController = rootViewController;
+        _banner.adUnitID = kSampleAdUnitID;
+        
+        GADRequest *request = [GADRequest request];
+        [_banner loadRequest:request];
+        [rootViewController.view addSubview:_banner];
+        isLoaded_ = YES;
+    }
 }
 
 @end
