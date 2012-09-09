@@ -7,20 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIGridView.h"
 #import "MPAdView.h"
+#import "ShellViewCell.h"
+#import "GADBannerView.h"
 
-@interface UIGridViewController : UIViewController <UIGridViewDelegate, UIGridViewDataSource,UIScrollViewDelegate, MPAdViewDelegate>
+@interface UIGridViewController : UIViewController <UIScrollViewDelegate, MPAdViewDelegate, UITableViewDataSource, UITableViewDelegate, ShellViewCellDelegate>
 {
-    UIGridView * gridView;
+    UITableView * _tableView;
     UIView * _headerView;
     NSMutableArray * _gridData;
+    NSMutableArray * _tableData;
     NSString * _parentId;
     MPAdView * _adView;
+    
+    GADBannerView * _banner;
+    BOOL isLoaded_;
+    id currentDelegate_;
 }
 
 @property (nonatomic, retain) NSString * parentId;
-@property (nonatomic, retain) UIGridView * gridView;
 @property (nonatomic, retain) NSMutableArray * gridData;
 
 @end
